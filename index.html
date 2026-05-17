@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>走過離婚，找回完整的自己 — 布丁乾</title>
+  <meta name="description" content="布丁乾的親身經歷課程。法律、情緒、身心照顧、自我重建，NT$499 陪你走過離婚這段路。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #fdf8f3;
+      --cream-mid: #f5ede5;
+      --cream-deep: #ede3da;
+      --brown-dark: #3A2518;
+      --brown-mid: #56372A;
+      --brown-main: #8B6F5E;
+      --brown-light: #C5A898;
+      --brown-pale: #F2E8E0;
+      --brown-text: #6B5247;
+      --brown-muted: #A88878;
+      --brown-faint: #B09080;
+      --border: rgba(139,111,94,0.18);
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: var(--cream);
+      color: var(--brown-dark);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,248,243,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 0.8rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--brown-mid);
+      letter-spacing: 1px;
+    }
+
+    .nav-btn {
+      font-size: 12px;
+      color: var(--brown-main);
+      border: 1px solid var(--brown-light);
+      padding: 6px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      background: transparent;
+      font-family: 'Noto Sans TC', sans-serif;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover { background: rgba(139,111,94,0.1); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, var(--cream) 0%, var(--cream-mid) 55%, var(--cream-deep) 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(197,168,152,0.12);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(197,168,152,0.08);
+    }
+
+    .hero-pill {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: var(--brown-main);
+      background: rgba(139,111,94,0.1);
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(24px, 5vw, 34px);
+      font-weight: 600;
+      color: var(--brown-dark);
+      line-height: 1.55;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--brown-main);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--brown-text);
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      line-height: 2;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--brown-muted);
+    }
+
+    .meta-item i { font-size: 14px; }
+
+    .price-wrap { margin-bottom: 1.4rem; }
+
+    .price-main {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      background: var(--brown-dark);
+      color: #f9f2ec;
+      padding: 12px 32px;
+      border-radius: 40px;
+    }
+
+    .price-nt { font-size: 14px; opacity: 0.7; }
+
+    .price-num {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .price-desc {
+      font-size: 12px;
+      color: var(--brown-muted);
+      margin-top: 0.5rem;
+    }
+
+    .btn-buy {
+      display: inline-block;
+      background: var(--brown-main);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 14px 38px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      margin-top: 1.2rem;
+      font-family: 'Noto Sans TC', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+
+    .btn-buy:hover { background: #6B4F3E; transform: translateY(-2px); }
+
+    /* ── Sections ── */
+    .sec { margin-bottom: 2.5rem; }
+
+    .sec-eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--brown-faint);
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .sec-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--brown-dark);
+      margin-bottom: 1.3rem;
+    }
+
+    .divider {
+      height: 0.5px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── Pain grid ── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+    }
+
+    .pain-card {
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem;
+    }
+
+    .pain-icon {
+      font-size: 22px;
+      color: var(--brown-main);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .pain-card p {
+      font-size: 13px;
+      color: var(--brown-text);
+      line-height: 1.7;
+    }
+
+    /* ── Curriculum ── */
+    .module {
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+
+    .mod-hd {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.9rem 1.2rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .mod-hd:hover { background: #fdf6f0; }
+
+    .mod-num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--brown-pale);
+      color: var(--brown-main);
+      font-size: 11px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mod-title {
+      font-size: 14px;
+      font-weight: 500;
+      flex: 1;
+      color: var(--brown-dark);
+    }
+
+    .mod-arrow {
+      font-size: 14px;
+      color: var(--brown-faint);
+      transition: transform 0.25s;
+    }
+
+    .mod-arrow.open { transform: rotate(180deg); }
+
+    .mod-body {
+      display: none;
+      padding: 0 1.2rem 0.9rem 3.4rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .mod-body.open { display: block; }
+
+    .mod-body ul {
+      list-style: none;
+      padding-top: 0.6rem;
+    }
+
+    .mod-body li {
+      font-size: 14px;
+      color: var(--brown-text);
+      padding: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .mod-body li::before {
+      content: '›';
+      color: var(--brown-main);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── About ── */
+    .about-card {
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .about-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: #EAD8CC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .about-name {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--brown-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .about-body {
+      font-size: 14px;
+      color: var(--brown-text);
+      line-height: 2;
+      border-top: 0.5px solid var(--border);
+      padding-top: 1rem;
+    }
+
+    .about-body strong {
+      font-weight: 500;
+      color: var(--brown-mid);
+    }
+
+    /* ── Tree Hollow ── */
+    .tree-section {
+      background: linear-gradient(135deg, #f8f1ea 0%, #eeddd2 100%);
+      border-radius: var(--radius-xl);
+      padding: 2.2rem 1.8rem;
+      margin-bottom: 2.5rem;
+      border: 0.5px solid #D8C0B0;
+    }
+
+    .tree-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .tree-icon { font-size: 26px; color: #7A5848; }
+
+    .tree-name {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #5A3E31;
+    }
+
+    .tree-tagline {
+      font-size: 13px;
+      color: var(--brown-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .tree-desc {
+      font-size: 14px;
+      color: var(--brown-text);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .tree-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 8px;
+      margin-bottom: 1.8rem;
+    }
+
+    .tree-feat {
+      background: rgba(255,255,255,0.65);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .tree-feat i { font-size: 15px; color: var(--brown-main); flex-shrink: 0; margin-top: 3px; }
+    .tree-feat span { font-size: 13px; color: #5A3E31; line-height: 1.6; }
+
+    .tree-bottom {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .tree-cta-text { flex: 1; min-width: 160px; }
+
+    .tree-cta-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 16px;
+      color: var(--brown-dark);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .tree-cta-body { font-size: 13px; color: var(--brown-text); line-height: 1.8; }
+
+    .qr-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.75);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.2rem;
+      border: 0.5px solid #D0B5A5;
+      flex-shrink: 0;
+    }
+
+    .qr-img {
+      width: 130px; height: 130px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .qr-img img { width: 100%; height: 100%; object-fit: contain; }
+
+    .qr-label { font-size: 13px; color: #7A5848; font-weight: 500; }
+    .qr-sub { font-size: 11px; color: var(--brown-muted); }
+
+    /* ── Quotes ── */
+    .quote {
+      background: #fdf6f0;
+      border-left: 3px solid var(--brown-light);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: 1rem 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .quote-text {
+      font-size: 14px;
+      color: #5A3E31;
+      line-height: 1.9;
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+
+    .quote-who { font-size: 12px; color: var(--brown-muted); font-weight: 500; }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      background: linear-gradient(150deg, var(--brown-dark) 0%, var(--brown-mid) 100%);
+      border-radius: var(--radius-xl);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .final-cta h2 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #f9f2ec;
+      margin-bottom: 0.6rem;
+    }
+
+    .final-cta p {
+      font-size: 14px;
+      color: rgba(249,242,236,0.65);
+      margin-bottom: 1.8rem;
+      line-height: 1.9;
+    }
+
+    .btn-final {
+      display: inline-block;
+      background: #f9f2ec;
+      color: var(--brown-dark);
+      font-size: 16px;
+      font-weight: 500;
+      padding: 14px 38px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Noto Sans TC', sans-serif;
+      transition: opacity 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+
+    .btn-final:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--brown-faint);
+      padding: 1.5rem 0 2rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .tree-bottom { flex-direction: column; align-items: center; }
+      .qr-wrap { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">謐謐樹洞</div>
+  <a class="nav-btn" href="#tree-sec">一對一聊聊 ↓</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-pill">布丁乾的親身經歷 × 影片課程</div>
+    <h1>走過離婚，<br><em>找回完整的自己</em></h1>
+    <p class="hero-sub">不是教科書式的建議，是一個真實走過的人，帶你穿越法律、情緒、身心照顧、自我重建的每一道關卡。</p>
+    <div class="hero-meta">
+      <span class="meta-item"><i class="fa-regular fa-circle-play"></i> 6 個主題單元</span>
+      <span class="meta-item"><i class="fa-solid fa-infinity"></i> 永久觀看</span>
+      <span class="meta-item"><i class="fa-regular fa-clock"></i> 隨時可開始</span>
+    </div>
+    <div class="price-wrap">
+      <div class="price-main">
+        <span class="price-nt">NT$</span>
+        <span class="price-num">499</span>
+      </div>
+      <div class="price-desc">一次付清 · 永久使用 · 隨時回看</div>
+    </div>
+    <a href="#buy" class="btn-buy">立即購買課程 →</a>
+  </div>
+
+  <!-- Pain points -->
+  <div class="sec">
+    <div class="sec-eyebrow">你是否正在經歷</div>
+    <div class="sec-title">這些困境，我都懂</div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <i class="fa-regular fa-map pain-icon"></i>
+        <p>不知道離婚手續怎麼走，每一步都像在摸黑</p>
+      </div>
+      <div class="pain-card">
+        <i class="fa-regular fa-moon pain-icon"></i>
+        <p>情緒崩潰、失眠，卻不知道怎麼跟別人說</p>
+      </div>
+      <div class="pain-card">
+        <i class="fa-regular fa-comments pain-icon"></i>
+        <p>不知道怎麼面對孩子、家人，無法開口</p>
+      </div>
+      <div class="pain-card">
+        <i class="fa-regular fa-heart pain-icon"></i>
+        <p>身心俱疲，不確定自己是否需要專業協助</p>
+      </div>
+      <div class="pain-card">
+        <i class="fa-solid fa-seedling pain-icon"></i>
+        <p>想重新開始，卻不確定自己還剩下什麼</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Curriculum -->
+  <div class="sec">
+    <div class="sec-eyebrow">課程內容</div>
+    <div class="sec-title">完整課程大綱</div>
+
+    <div class="module">
+      <div class="mod-hd" onclick="tog(this)">
+        <div class="mod-num">01</div>
+        <div class="mod-title">面對現實：離婚前你需要知道的事</div>
+        <i class="fa-solid fa-chevron-down mod-arrow"></i>
+      </div>
+      <div class="mod-body">
+        <ul>
+          <li>協議離婚 vs 訴訟離婚的差異</li>
+          <li>我的第一步：怎麼開口說出口</li>
+          <li>接受混亂期——你的感受是真實的</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="mod-hd" onclick="tog(this)">
+        <div class="mod-num">02</div>
+        <div class="mod-title">法律與實務：流程不再霧煞煞</div>
+        <i class="fa-solid fa-chevron-down mod-arrow"></i>
+      </div>
+      <div class="mod-body">
+        <ul>
+          <li>離婚協議書要寫什麼</li>
+          <li>財產分配、贍養費怎麼談</li>
+          <li>孩子的監護權：心碎中的理性決定</li>
+          <li>我踩過的雷，讓你少走冤枉路</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="mod-hd" onclick="tog(this)">
+        <div class="mod-num">03</div>
+        <div class="mod-title">情緒調適：如何不在崩潰中沉沒</div>
+        <i class="fa-solid fa-chevron-down mod-arrow"></i>
+      </div>
+      <div class="mod-body">
+        <ul>
+          <li>悲傷的五個階段，你現在在哪裡</li>
+          <li>每天最難熬的時刻怎麼撐過去</li>
+          <li>與憤怒、委屈、自我懷疑和解</li>
+          <li>我如何重新睡著的方法</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="mod-hd" onclick="tog(this)">
+        <div class="mod-num">04</div>
+        <div class="mod-title">告訴孩子、家人與朋友</div>
+        <i class="fa-solid fa-chevron-down mod-arrow"></i>
+      </div>
+      <div class="mod-body">
+        <ul>
+          <li>怎麼跟孩子開口？不同年齡的說法</li>
+          <li>面對爸媽的反應與壓力</li>
+          <li>當朋友不理解你的決定</li>
+          <li>社群媒體上的你，要說還是不說</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="mod-hd" onclick="tog(this)">
+        <div class="mod-num">05</div>
+        <div class="mod-title">身心科就診：鼓起勇氣求助的那一步</div>
+        <i class="fa-solid fa-chevron-down mod-arrow"></i>
+      </div>
+      <div class="mod-body">
+        <ul>
+          <li>我為什麼決定去身心科</li>
+          <li>第一次就診前，你需要知道的事</li>
+          <li>藥物、諮商、還是兩者並行？</li>
+          <li>怎麼找到適合自己的醫生或諮商師</li>
+          <li>去看診不代表你「壞掉了」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="mod-hd" onclick="tog(this)">
+        <div class="mod-num">06</div>
+        <div class="mod-title">重建自我：從頭認識那個新的你</div>
+        <i class="fa-solid fa-chevron-down mod-arrow"></i>
+      </div>
+      <div class="mod-body">
+        <ul>
+          <li>獨居生活的第一個月怎麼過</li>
+          <li>找回自己的興趣與節奏</li>
+          <li>財務獨立的第一步</li>
+          <li>什麼時候才算真正走出來了</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- About -->
+  <div class="sec">
+    <div class="sec-eyebrow">關於我</div>
+    <div class="sec-title">布丁乾的故事</div>
+    <div class="about-card">
+      <div class="about-top">
+        <div class="avatar">
+          <i class="fa-regular fa-user" style="font-size:22px;color:#8B6F5E;"></i>
+        </div>
+        <div>
+          <div class="about-name">布丁乾</div>
+        </div>
+      </div>
+      <div class="about-body">
+        交往十年，滿頭熱地想走進婚姻——卻在多頭火車同時撞上來的狀態下，<strong>結束了一段婚姻，也結束了一份工作</strong>。<br><br>
+        那時以為找到下一份工作就能麻痺自己，但慢慢發現，中間需要尋找、需要面對的事情太多太多。<br><br>
+        所以我決定把這一切記錄下來。不是因為我已經完全走出來了，而是因為<strong>這是一個你可能也會走過的過程</strong>——讓曾經度過那段日子的我，和你在同一艘船上，一起撐過這段難熬的時光。
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Tree Hollow -->
+  <div id="tree-sec" class="tree-section">
+    <div class="tree-header">
+      <i class="fa-solid fa-tree tree-icon"></i>
+      <div class="tree-name">謐謐樹洞</div>
+    </div>
+    <div class="tree-tagline">課程之外，有個地方可以好好說話</div>
+    <div class="tree-desc">
+      有些話，說給影片聽還不夠。<br>
+      謐謐樹洞提供一對一的聊天與陪伴，讓你在真實的對話裡，被好好接住。
+    </div>
+    <div class="tree-features">
+      <div class="tree-feat">
+        <i class="fa-regular fa-ear-listen"></i>
+        <span>不評判、不給建議，先好好聽你說</span>
+      </div>
+      <div class="tree-feat">
+        <i class="fa-solid fa-lock"></i>
+        <span>私密安全的空間，說什麼都可以</span>
+      </div>
+      <div class="tree-feat">
+        <i class="fa-regular fa-heart"></i>
+        <span>真人陪伴，不是機器人</span>
+      </div>
+      <div class="tree-feat">
+        <i class="fa-brands fa-line"></i>
+        <span>透過 LINE 聯繫，方便彈性</span>
+      </div>
+    </div>
+    <div class="tree-bottom">
+      <div class="tree-cta-text">
+        <div class="tree-cta-title">想找人聊聊嗎？</div>
+        <div class="tree-cta-body">掃描右側 QR Code，加入 LINE 後傳訊息給我，我們可以先聊聊你的狀況，再決定怎麼進行。不需要準備什麼，說說你現在的樣子就好。</div>
+      </div>
+      <div class="qr-wrap">
+        <div class="qr-img">
+          <img src="qr.png" alt="謐謐樹洞 LINE QR Code">
+        </div>
+        <div class="qr-label">加入謐謐樹洞 LINE</div>
+        <div class="qr-sub">掃描後即可傳訊息</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quotes -->
+  <div class="sec">
+    <div class="sec-eyebrow">學員回饋</div>
+    <div class="sec-title">她們說</div>
+    <div class="quote">
+      <div class="quote-text">「第三堂課讓我哭了半小時，但哭完覺得輕了很多。那種被理解的感覺，是任何人都給不了的。」</div>
+      <div class="quote-who">— Ling，35歲，兩個孩子的媽</div>
+    </div>
+    <div class="quote">
+      <div class="quote-text">「我以為自己要好幾年才走得出來，看完課程一個月後，我第一次覺得未來是有顏色的。」</div>
+      <div class="quote-who">— Mei，42歲，簽完協議書的第二天</div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div id="buy" class="final-cta">
+    <h2>準備好，給自己一個開始</h2>
+    <p>課程永久觀看，隨時都可以從你需要的那一堂開始<br>你不需要準備好才能開始，開始了就是準備好了</p>
+    <a href="#" class="btn-final">NT99 立即購買</a>
+  </div>
+
+  <footer>© 2025 謐謐樹洞 · 布丁乾</footer>
+
+</div>
+
+<script>
+  function tog(hd) {
+    const arrow = hd.querySelector('.mod-arrow');
+    const body = hd.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.mod-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.mod-arrow').forEach(a => a.classList.remove('open'));
+    if (!isOpen) {
+      body.classList.add('open');
+      arrow.classList.add('open');
+    }
+  }
+</script>
+
+</body>
+</html>
